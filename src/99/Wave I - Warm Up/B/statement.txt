@@ -1,0 +1,25 @@
+Painting on Terminal
+    Terminal is limited to some rows and columns of characters. Painting on  it
+    was always a fun thing with lots of buggy moments.
+
+Problem Statement:
+    Given a number $f the number fruits on the tree and  you must print a  palm
+    with $f fruits on it.
+
+Input and Rules:
+    $n:int
+    (0 <= n <= 7)
+    Fruit on the tree are stacked together aligned to the left side.
+    Every fruits is shown with a 'o' character.
+    Tree has 4 level of stems and two extra branches on the 4th level.
+
+Sample:
+    Input:
+    3
+    Output:
+    [ooo----]
+       \|/   
+        |    
+        |    
+        |    
+    Note: 3 fruits are on the tree
