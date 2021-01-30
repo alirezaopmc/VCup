@@ -1,0 +1,38 @@
+Query and Command
+    Command Querying  pattern is  one of the most important  patterns used in a
+    various manner like API and CLI Applications.
+
+Problem Statement:
+    Given  two  numbers  $n and $q  for the initial number and  the  number  of
+    querying must be done on it. Every query is a simple mathematical operation
+    that must be done on $n.
+
+Input and Rules:
+    $n:int $q:int
+    (-100 < n < 100)
+    (0 < q < 10)
+    [q lines]
+    -> $c $t
+        if $c is +: add $t to $n
+        if $c is -: subtract $t from $n
+        if $c is *: multiply $n by $t
+        if $c is /: divide $n by $t (floor)
+        if $c is %: remainder of $n divided by $t will assign to n
+        if $c is ^: $n to the power of $t
+        if $c is ?: print the current value of $n on console no need to receive $t
+    
+Sample:
+    Input:
+    13 6 
+    + 3 
+    ?    
+    - 13
+    ^ 2 
+    ?    
+    % 5  
+    ?    
+    !   
+    Output:
+    16
+    9
+    4
