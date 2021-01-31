@@ -1,0 +1,7 @@
+The contest is held in 3 waves of different problems. Every wave comes after a gap.
+Problems are designed in such a way that contains some advanced and useful concepts
+in software engineering and computer science.
+
+Wave   I: Warm Up
+Wave  II: Challenger
+Wave III: Hardcore
