@@ -1,0 +1,30 @@
+ASCII and Characters
+    Command Querying  pattern is  one of the most important  patterns used in a
+    Characters  are  encoded in many different ways but ASCII is  standard  for
+    electronic communication.
+
+Problem Statement:
+    The english alphabet is abcdefghijklmnopqrstuvwxyz as all we know but there
+    is  a  magic  character  set  including exact characters  of  the  standard
+    alphabet but in random order. You are  given a string of 26 characters  but
+    randomized. Suppose  character $c was $i-th character in standard  alphabet
+    and $j-th character in the given string, the cost of this character between
+    these two alphabet is equal to $(i-j)^2. Similarly for a word containing
+    some characters, the cost is equal to sum of the cost of all characters.
+
+    You are given a word in  addition to the  randomized alphabet and your  must
+    calculate the cost of the word.
+
+
+Input and Rules:
+    $s:string
+    |s| = 26
+    $t:string
+    |t| < 1000000
+    
+Sample:
+    Input:
+    cbadefghijklmnopqrstuvwxyz
+    bbc
+    Output:
+    4
