@@ -1,0 +1,26 @@
+Matrix Multiplication:
+    Terminal is limited to some rows and columns of characters. Painting on  it
+    In science and math, matrices are used in many fields specially in machine-
+    -learning and artificial intelligence.
+
+    
+Problem Statement:
+    Given two matrices and you must calculate the multiplication of them.
+
+Input and Rules:
+    $n:int $m:int $k:int
+    [n lines][m integers]
+    [m lines][k integers]
+
+Sample:
+    Input:
+    3 2 1
+    3 2
+    -9 4
+    -1 11
+    -2
+    2
+    Output:
+    -2
+    26
+    24
