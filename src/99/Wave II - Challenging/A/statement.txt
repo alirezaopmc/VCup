@@ -5,7 +5,10 @@ Matrix Multiplication:
 
     
 Problem Statement:
-    Given two matrices and you must calculate the multiplication of them.
+    Given two  matrices and you  must calculate  the magical multiplication  of
+    them. Magical multiplication is like normal multiplication but  instead  of
+    multiplying two elements, it use this function:
+                $f($x, $y):int => return ($x & $y) + ($x | $y)
 
 Input and Rules:
     $n:int $m:int $k:int
