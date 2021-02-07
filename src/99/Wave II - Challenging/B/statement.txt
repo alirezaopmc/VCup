@@ -1,0 +1,28 @@
+Painting on Terminal Wisely
+    Alternative problem with Wave I B
+
+Problem Statement:
+    Given a number $n and then $n strings as $s_i in next line.
+    Each string corresponds to the fruits on the tree.
+
+Input and Rules:
+    $n:int
+    (2 <= n <= 20)
+    $a_i:int
+    |s_i| = 7
+    Fruit on the tree are stacked together aligned to the left side.
+    Every fruits is shown with a 'o' character.
+    Tree has 4 level of stems and two extra branches on the 4th level.
+    Strings contain 0 and 1; 1 for fruit and 0 otherwise.
+
+Sample:
+    Input:
+    3
+    0110011 1110111 1010001
+    Output:
+    [-oo--oo][ooo-ooo][o-o---o]
+       \|/      \|/      \|/   
+        |        |        |    
+        |        |        |    
+        |        |        |    
+    
