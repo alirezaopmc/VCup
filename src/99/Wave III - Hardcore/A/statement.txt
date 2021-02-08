@@ -1,0 +1,28 @@
+Dynamic Programming:
+    Combining  some taste of math in programming can efficiently increase  the
+    performance. DP  is one  of the  most popular  mathematics and informatics
+    methods which is both mathematical optimizations and programming method.
+
+    
+Problem Statement:
+    Imagine a Snakes and Ladders game which only has one row of cells with  no
+    snakes. You  must count the number of  ways we can  reach from the  initial
+    cell to the last one.
+
+Input and Rules:
+    $n:int $m:int
+    $n the number of cells in the only row of the game.
+    $m the number of ladders
+    [$m lines]
+        $s:int $t:int
+        This shows the ladder which connect the $s-th cell to the $t-th cell.
+        Which means that you will be teleported to $t after you entered $s.
+        
+
+Sample:
+    Input:
+    7 2
+    2 4
+    3 6
+    Output:
+    11

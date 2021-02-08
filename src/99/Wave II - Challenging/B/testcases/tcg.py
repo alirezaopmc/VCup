@@ -28,6 +28,12 @@ def matMul(A, B):
                 y = B[t][j]
                 C[i][j] += (x & y) + (x | y)
     return C
+
+def giveRandomString(salt, length):
+    c = []
+    for i in range(length):
+        c.append(random.choice(salt))
+    return str(''.join(c))
     
 
 # Test-case generator template
@@ -38,22 +44,27 @@ def matMul(A, B):
 count = 0
 
 def giveRandomInput():
-    n, m, k = randInt(max = 100, cnt = 3)
-    A = [[ random.randint(-1000, 1000) for j in range(m) ] for i in range(n) ]
-    B = [[ random.randint(-1000, 1000) for j in range(k) ] for i in range(m) ]
-    return (n, m, k, A, B)
+    n = randInt(min = 2, max = 20)[0]
+    a = [giveRandomString('01', 7) for i in range(n)]
+    return (n, a)
 
 def solveOut(inputs):
-    (n, m, k, A, B) = inputs
+    (n, a) = inputs
 
-    C = matMul(A, B)
-
-    ans = ""
+    lines = [""] * 5
+    lines[1] = "   \|/   " * n
+    lines[2] = "    |    " * n
+    lines[3] = lines[2]
+    lines[4] = lines[2]
 
     for i in range(n):
-        for j in range(k):
-            ans += '{} '.format(C[i][j])
-        ans += '\n'
+        lines[0] += '[{}]'.format(a[i])
+    lines[0] = lines[0].replace('0', '-')
+    lines[0] = lines[0].replace('1', 'o')
+
+    ans = ""
+    for i in range(5):
+        ans += lines[i] + '\n'
 
     return "{}".format(str(ans))
 
@@ -89,17 +100,10 @@ def makeOutputs(outString, cnt):
 # Automatically add inputs
 for i in range(10):
     inputs = giveRandomInput()
-    (n, m, k, A, B) = inputs
+    (n, a) = inputs
 
-    inString = '{} {} {}\n'.format(n, m, k)
-    for i in range(n):
-        for j in range(m):
-            inString += '{} '.format(A[i][j])
-        inString += '\n'
-    for i in range(m):
-        for j in range(k):
-            inString += '{} '.format(B[i][j])
-        inString += '\n'
+    inString = '{}\n'.format(n)
+    inString += ' '.join(a)
     
     outString = solveOut(inputs)
 

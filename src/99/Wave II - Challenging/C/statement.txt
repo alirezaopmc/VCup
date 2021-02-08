@@ -1,28 +1,30 @@
-Dynamic Programming:
-    Combining  some taste of math in programming can efficiently increase  the
-    performance. DP  is one  of the  most popular  mathematics and informatics
-    methods which is both mathematical optimizations and programming method.
+ASCII and Characters
+    Command Querying  pattern is  one of the most important  patterns used in a
+    Characters  are  encoded in many different ways but ASCII is  standard  for
+    electronic communication.
 
-    
 Problem Statement:
-    Imagine a Snakes and Ladders game which only has one row of cells with  no
-    snakes. You  must count the number of  ways we can  reach from the  initial
-    cell to the last one.
+    The english alphabet is abcdefghijklmnopqrstuvwxyz as all we know but there
+    is  a  magic  character  set  including exact characters  of  the  standard
+    alphabet but in random order. You are  given a string of 26 characters  but
+    randomized. Suppose  character $c was $i-th character in standard  alphabet
+    and $j-th character in the given string, the cost of this character between
+    these two alphabet is equal to $(i-j)^2. Similarly for a word containing
+    some characters, the cost is equal to sum of the cost of all characters.
+
+    You are given a word in  addition to the  randomized alphabet and your  must
+    calculate the cost of the word.
+
 
 Input and Rules:
-    $n:int $m:int
-    $n the number of cells in the only row of the game.
-    $m the number of ladders
-    [$m lines]
-        $s:int $t:int
-        This shows the ladder which connect the $s-th cell to the $t-th cell.
-        Which means that you will be teleported to $t after you entered $s.
-        
-
+    $s:string
+    |s| = 26
+    $t:string
+    |t| < 1000000
+    
 Sample:
     Input:
-    7 2
-    2 4
-    3 6
+    cbadefghijklmnopqrstuvwxyz
+    bbc
     Output:
-    11
+    4
