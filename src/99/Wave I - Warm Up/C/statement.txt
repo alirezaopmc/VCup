@@ -1,0 +1,17 @@
+Coding and Decoding
+    Coding is used whenever we wanna communicate through a public method.
+
+Problem Statement:
+    Caesar cipher is a coding method, in this problem you must implement it.
+
+
+Input and Rules:
+    $s:string
+    $t:string
+    
+Sample:
+    Input:
+    abc
+    hello
+    Output:
+    igomq

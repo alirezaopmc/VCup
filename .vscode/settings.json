@@ -4,6 +4,11 @@
         "type_traits": "cpp",
         "xstring": "cpp",
         "xutility": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "ios": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "istream": "cpp"
     }
 }

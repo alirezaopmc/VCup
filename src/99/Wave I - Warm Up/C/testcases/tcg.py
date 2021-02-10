@@ -30,10 +30,10 @@ def matMul(A, B):
     return C
 
 def giveRandomString(salt, length):
-    c = []
+    s = []
     for i in range(length):
-        c.append(random.choice(salt))
-    return str(''.join(c))
+        s.append(random.choice(salt))
+    return ''.join(s)
     
 
 # Test-case generator template
@@ -41,32 +41,25 @@ def giveRandomString(salt, length):
 # and take n elements in second line
 # print sum of n elements mod m
 
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
 count = 0
 
 def giveRandomInput():
-    n = randInt(min = 2, max = 20)[0]
-    a = [giveRandomString('01', 7) for i in range(n)]
-    return (n, a)
+    s = giveRandomString(alphabet, randInt()[0])
+    t = giveRandomString(alphabet, randInt()[0])
+    return (s, t)
 
 def solveOut(inputs):
-    (n, a) = inputs
+    (s, t) = inputs
+    
+    ans = list(t)
+    off = 0
+    for i in range(len(ans)):
+        ans[i] = chr(ord('a') + (ord(t[i]) + ord(s[off]) - 2 * ord('a') + 1) % 26)
+        off = (off + 1) % len(s)
 
-    lines = [""] * 5
-    lines[1] = "   \|/   " * n
-    lines[2] = "    |    " * n
-    lines[3] = lines[2]
-    lines[4] = lines[2]
-
-    for i in range(n):
-        lines[0] += '[{}]'.format(a[i])
-    lines[0] = lines[0].replace('0', '-')
-    lines[0] = lines[0].replace('1', 'o')
-
-    ans = ""
-    for i in range(5):
-        ans += lines[i] + '\n'
-
-    return "{}".format(str(ans))
+    return str(''.join(ans))
 
 def makeInputs(inString, cnt):
     path = "./in/input" + str(cnt) + ".txt"
@@ -100,10 +93,9 @@ def makeOutputs(outString, cnt):
 # Automatically add inputs
 for i in range(10):
     inputs = giveRandomInput()
-    (n, a) = inputs
+    (s, t) = inputs
 
-    inString = '{}\n'.format(n)
-    inString += ' '.join(a)
+    inString = '{}\n{}'.format(s, t)
     
     outString = solveOut(inputs)
 

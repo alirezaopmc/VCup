@@ -1,42 +1,31 @@
 #include <iostream>
-#include <string>
-
+#define SIZE 99
 using namespace std;
-
-void f(string s);
-char up(char c);
-char low(char c);
-
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr); cout.tie(nullptr);
-    int n;
-    cin >> n;
-    string s;
-    cin.ignore();
-    for(int i = 0; i < n; i++) {
-        getline(cin, s);
-        f(s);
-    }
-}
-
-void f(string s) {
-    for(int i = 0; i < s.size(); i++) {
-        if (i == 0 || s[i-1] == ' ') {
-            cout << up(s[i]);
-        } else {
-            cout << low(s[i]);
-        }
-    }
-    cout << endl;
-}
-
-char up(char c) {
-    if (c >= 'a' && c <= 'z') c = 'A' + c - 'a';
-    return c;
-}
-
-char low(char c) {
-    if (c >= 'A' && c <= 'Z') c = 'a' + c - 'A';
-    return c;
+int main (){
+	long long int n;
+	int r,a[SIZE],i=0;
+	cin>>n;
+	if(n==0){
+		cout<<n<<": ";
+	}
+    while(n>0){
+    	r=n%10;
+        a[i]=r;
+    	n=n/10;
+    	i++;
+	}
+	if(i>=SIZE+1){
+		return 0;
+	}
+	else{
+	for(int j=i-1;j>=0;j--){
+		cout<<a[j]<<": ";
+		for(int k=1;k<=a[j];k++){
+			cout<<a[j];
+		}
+		cout<<"\n";
+	}
+   }
+	
+	return 0;
 }
